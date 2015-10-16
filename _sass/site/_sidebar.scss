@@ -1,0 +1,47 @@
+/**
+ * ======================================
+ * ---------- SITE SIDEBAR --------------
+ * ======================================
+ */
+
+.site-sidebar {
+
+	padding: 1em .5em;
+
+	.module {
+		@include post;
+		padding: 0;
+	}
+
+	.module-body {
+		padding: 0 .5em;
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.block-module-header {
+		h2 {
+			margin: 0;
+			padding: .5em;
+		}
+	}
+
+	.svg-container {
+		padding: 0;
+		.icon {
+			width: 1em;
+			height: .8em;
+		}
+	}
+
+	@include breakpoint(medium){
+		width: 33.33%;
+		float: left;
+	}
+
+	.post-page & {
+		width: 100%;
+	}
+
+}

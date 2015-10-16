@@ -1,0 +1,99 @@
+/**
+ * ======================================
+ * ------- NOTIFICATION BOXES -----------
+ * ======================================
+ */
+
+[class^="alert-"] {
+	background-color: $light-gray;
+	padding: $baseline/4 $baseline*1.5;
+	margin-bottom: $baseline;
+	position: relative;
+	overflow: hidden;
+
+	.line1,
+	.line2 {
+		position: absolute;
+		width: $baseline;
+	}
+
+	.line1 {
+		background-color: $gray;
+		top: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	.line2 {
+		background-color: $dark-gray;
+		bottom: 100%;
+		left: 0;
+		height: 100%;
+		max-height: 100%;
+		-webkit-transition: all .5s ease-in;
+		        transition: all .5s ease-in;
+	}
+
+	&:hover {
+		.line2 {
+			bottom: 0;
+		}
+	}
+
+}
+
+.alert-info	{
+	background-color: $light-blue;
+	box-shadow: 0 15px 2px -10px $blue;
+	h3 {
+		color: $dark-blue;
+	}
+	.line1 {
+		background-color: $blue;
+	}
+	.line2 {
+		background-color: $dark-blue;
+	}
+}
+
+.alert-success	{
+	background-color: $light-green;
+	box-shadow: 0 15px 2px -10px $green;
+	h3 {
+		color: $dark-green;
+	}
+	.line1 {
+		background-color: $green;
+	}
+	.line2 {
+		background-color: $dark-green;;
+	}
+}
+
+.alert-warning	{
+	background-color: $light-orange;
+	box-shadow: 0 15px 2px -10px $orange;
+	h3 {
+		color: $dark-orange;
+	}
+	.line1 {
+		background-color: $orange;
+	}
+	.line2 {
+		background-color: $dark-orange;
+	}
+}
+
+.alert-error {
+	background-color: $light-red;
+	box-shadow: 0 15px 2px -10px $red;
+	h3 {
+		color: $dark-red;
+	}
+	.line1 {
+		background-color: $red;
+	}
+	.line2 {
+		background-color: $dark-red;
+	}
+}

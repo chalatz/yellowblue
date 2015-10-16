@@ -1,0 +1,145 @@
+// ------- Yellowblue -------------------
+
+$main-color: yellow;
+
+// --- Body
+$font-color: #000000;
+$bg-color: #7ed6ff;
+$link-color: #0000ee;
+
+// ---- Header
+$site-header-bg: darken($bg-color, 45%);
+$site-header-font-color: #fff;
+$site-logo-font-shadow: #000;
+
+// ---- Navigation
+$nav-bg-color: $main-color;
+$nav-font-color: #0000ee;
+$nav-item-underline-color: darken($bg-color, 40%);
+$nav-item-underline-hover-color: $bg-color;
+
+// ---- Posts
+$post-title-hover-color: $blue;
+$read-more-bg: $bg-color;
+$read-more-cross-bg: $main-color;
+$read-more-font-color: #000;
+$read-more-hover-bg: $blue;
+$read-more-hover-color: #fff;
+$hero-image-shadow: $dark-blue;
+$category-link-color: $dark-blue;
+$category-link-color-visited: $dark-blue;
+$category-link-color-hover: $dark-orange;
+$tag-link-color: $dark-orange;
+$tag-link-color-visited: $dark-orange;
+$tag-link-color-hover: $dark-blue;
+$categories-icon-fill: $blue;
+$tags-icon-fill: $dark-orange;
+.post-categories {
+	.icon {
+		fill: $blue;
+	}
+}
+.post-tags {
+	.icon {
+		fill: $tags-icon-fill;
+	}
+}
+
+// ---- Pagination
+$current-page-bg: $main-color;
+$current-page-color: darken($bg-color, 45%);
+$pagination-link-color: $main-color;
+$pagination-link-bg: darken($bg-color, 45%);
+$pagination-link-hover-bg: $main-color;
+$pagination-link-hover-color: darken($bg-color, 45%);
+
+// ---- Posts Nav
+$posts-nav-color: $main-color;
+$posts-nav-bg: darken($bg-color, 45%);
+$posts-nav-hover: $dark-blue;
+
+// ---- Go To Top icon
+$go-to-top-fill: $main-color;
+$go-top-fill-hover: #fff;
+.go-to-top {
+	.icon {
+		fill: $go-to-top-fill;
+	}
+}
+
+// ---- Footer
+$site-footer-bg: darken($bg-color, 45%);
+$site-footer-font-color: #fff;
+$site-footer-link-color: $main-color;
+$social-icons-hover: $main-color;
+.social-info {
+	.icon {
+		fill: $light-blue;
+	}
+}
+.rss-icon {
+	fill: $site-footer-link-color;
+}
+
+// ---- Tags Labels list
+$tag-label-bg: $blue;
+$tag-label-font-color: $main-color;
+
+// ---- Outer Header
+$outer-header-color: $dark-blue;
+$outer-header-shadow-color: #fff;
+$outer-header-icon-fill: $dark-blue;
+
+// ---- Outer Header span for category name
+.outside-cats {
+	color: yellow;
+	text-shadow: 1px 1px 1px #000;
+}
+
+// ---- Outer Header span for tag name
+.outside-tags {
+	color: $dark-red;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+// ---- Front Page Modules
+// ---- If you plan to use color variation classes, you can omit using the styles below
+.site-sidebar {
+	.module:nth-child(1) {
+		h2 {
+			background-color: $blue;
+			color: yellow;
+			.icon {
+				fill: yellow;
+			}
+		}
+	}
+	.module:nth-child(2) {
+		h2 {
+			background-color: $light-blue;
+		}
+	}
+}
+
+.front-page-modules-1 {
+	.module:nth-child(1) {
+		h3 {
+			background-color: $blue;
+			color: yellow;
+		}
+	}
+	.module:nth-child(2) {
+		h3 {
+			background-color: yellow;
+			color: #000;
+		}
+	}
+}
+
+.front-page-modules-2 {
+	.module:nth-child(1) {
+		h3 {
+			background-color: $light-blue;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+---
+layout: categories_list
+cat_name: welcome
+---
+
+{% for post in site.categories.welcome %}
+
+  {% include teaser.html %}
+
+{% endfor %}

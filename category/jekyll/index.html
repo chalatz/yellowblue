@@ -1,0 +1,10 @@
+---
+layout: categories_list
+cat_name: Jekyll
+---
+
+{% for post in site.categories.jekyll %}
+
+  {% include teaser.html %}
+
+{% endfor %}

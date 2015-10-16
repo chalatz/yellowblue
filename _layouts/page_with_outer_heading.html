@@ -1,0 +1,22 @@
+---
+layout: post_page
+---
+
+<h1 class="outside-header">
+	{% if page.icon %}
+		<div data-sr="enter bottom" class="svg-container">
+			<svg class="icon {{page.icon}}" viewBox="0 0 32 32">
+				<use xlink:href="#{{page.icon}}"></use>
+			</svg>
+		</div>
+	{% endif%}
+	{{ page.title }}
+</h1>
+
+<div class="post">
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</div>

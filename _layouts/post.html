@@ -1,0 +1,89 @@
+---
+layout: post_page
+---
+<div class="post">
+
+	<div class="post-content-wrapper">
+		<header class="post-header">
+		<h1 data-sr="enter right" class="post-title">{{ page.title }}</h1>
+		<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+		{% assign cat_size = page.categories | size %}
+		{% if cat_size != 0 %}
+			<div class="post-categories">
+				<div class="svg-container">
+					<svg class="icon icon-list2 icon-blue" viewBox="0 0 32 32">
+						<use xlink:href="#icon-list2"></use>
+					</svg>
+				</div>
+
+				{% assign last_cat = page.categories | last %}
+				{% for cat_name in page.categories %}
+					{% assign cat_slug = cat_name | slugify  %}
+					{% if cat_name != last_cat %}
+						<a class="category-link" href="/category/{{cat_slug | prepend: site.baseurl}}">{{cat_name}}</a> ,
+					{% else %}
+						<a class="category-link" href="/category/{{cat_slug | prepend: site.baseurl}}">{{cat_name}}</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		{% if page.hero %}
+			<div class="hero-image">
+				{% if page.hero_high %}
+					<a class="image-link" href="/{{page.hero_high}}"><img src="/{{page.hero | prepend: site.baseurl}}" alt="{{page.hero_alt}}"></a>
+				{% else %}
+					<img src="/{{page.hero | prepend: site.baseurl}}" alt="{{page.hero_alt}}">
+				{% endif %}
+			</div>
+		{% endif%}
+
+		</header>
+
+		<article class="post-content">
+		{{ content }}
+		</article>
+
+		{% assign tags_size = page.tags | size %}
+		{% if tags_size != 0 %}
+			<div class="post-tags">
+				<div class="svg-container">
+					<svg class="icon icon-tag icon-dark-orange" viewBox="0 0 32 32">
+						<use xlink:href="#icon-tag"></use>
+					</svg>
+				</div>
+
+				{% assign last_tag = page.tags | last %}
+				{% for tag_name in page.tags %}
+					{% assign tag_slug = tag_name | slugify  %}
+					{% if tag_name != last_tag %}
+						<a class="tag-link" href="/tag/{{tag_slug | prepend: site.baseurl}}">{{tag_name}}</a> ,
+					{% else %}
+						<a class="tag-link" href="/tag/{{tag_slug | prepend: site.baseurl}}">{{tag_name}}</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		{% if page.comments == null and site.comments %}
+			{% include comments.html %}
+		{% endif %}
+		{% if page.comments and site.comments %}
+			{% include comments.html %}
+		{% endif %}
+		{% if page.comments and site.comments == false %}
+			{% include comments.html %}
+		{% endif %}
+
+	</div>
+
+	<div class="posts-nav">
+		{% if(page.previous) %}
+			<a href="{{page.previous.url}}" title="{{page.previous.title}}" class="go-to right-post">&rarr;</i></a>
+		{% endif %}
+		{% if(page.next) %}
+			<a href="{{page.next.url}}" title="{{page.next.title}}" class="go-to left-post">&larr;</a>
+		{% endif %}
+	</div>
+
+</div>

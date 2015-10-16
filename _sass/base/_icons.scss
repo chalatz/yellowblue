@@ -1,0 +1,116 @@
+/**
+ * ======================================
+ * --------------- ICONS ----------------
+ * ======================================
+ */
+
+/**
+ * $icon-dimension holds the width of the default size of the SVG icons.
+ * Change it, if you wish a different default size to your icons.
+ * You can use this variable if you want different relative numbers, like the icons' padding or the other relative sizes.
+ * For instance, the large version has a width of $icon-dimension*1.5. You can adjust the multiplier to your likings.
+*/
+
+$icon-dimension: 1em;
+
+.svg-container {
+	display: inline-block;
+	padding: $icon-dimension/4;
+	color: #000;
+	&.circled {
+		padding: $icon-dimension/2;
+	}
+	.icon {
+		width: $icon-dimension;
+		height: $icon-dimension;
+	}
+}
+
+.svg-container-large {
+	@extend .svg-container;
+	padding: $icon-dimension/2;
+	&.circled {
+		padding: $icon-dimension*1.5;
+	}
+	.icon {
+		width: $icon-dimension * 3;
+		height: $icon-dimension * 3;
+	}
+}
+
+.svg-container-larger {
+	@extend .svg-container;
+	padding: $icon-dimension;
+	margin-right: $side-padding;
+	&.circled {
+		padding: $icon-dimension*2;
+	}
+	.icon {
+		width: $icon-dimension * 6;
+		height: $icon-dimension * 6;
+	}
+}
+
+.icon-container {
+	@include sized_box(12em, 7em);
+	@include bordered(3px, $gray, 6px);
+	&:hover {
+		background-color: $gray;
+	}
+}
+
+// --- Color Variations for icons
+.icon-black {
+	fill: #000;
+}
+.icon-blue {
+	fill: $blue;
+}
+.icon-light-blue {
+	fill: $light-blue;
+}
+.icon-dark-blue {
+	fill: $dark-blue;
+}
+.icon-yellow {
+	fill: yellow;
+}
+.icon-green {
+	fill: $green;
+}
+.icon-light-green {
+	fill: $light-green;
+}
+.icon-dark-green {
+	fill: $dark-green;
+}
+.icon-orange {
+	fill: $orange;
+}
+.icon-light-orange {
+	fill: $dark-orange;
+}
+.icon-dark-orange {
+	fill: $dark-orange;
+}
+.icon-red {
+	fill: $red;
+}
+.icon-light-red {
+	fill: $red;
+}
+.icon-dark-red {
+	fill: $dark-red;
+}
+.icon-gray {
+	fill: $gray;
+}
+.icon-light-gray {
+	fill: $light-gray;
+}
+.icon-dark-gray {
+	fill: $dark-gray;
+}
+.icon-white {
+	fill: #fff;
+}

@@ -1,0 +1,297 @@
+/**
+ * ======================================
+ * ----------- TYPOGRAPHY ---------------
+ * ======================================
+ */
+
+// ---- You can choose a different set of fonts here
+$font-family: 'Open Sans', sans-serif;
+
+// ---- The headings font sizes
+$font-size-h1: 2.827em;
+$font-size-h2: 1.999em;
+$font-size-h3: 1.414em;
+$font-size-h4: 1em;
+$font-size-h5: 0.707em;
+$font-size-h6: .5em;
+
+// ---- Color for horizontal rows
+$hr-color: $blue;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+	font-size: 1em;
+}
+
+body {
+	background-color: $bg-color;
+	font-family: $font-family;
+	margin: 0 auto;
+	color: $font-color;
+}
+
+/*---------------- HEADINGS ---------------*/
+
+h1, h2, h3, h4, h5,h6 {
+	margin: .5em 0;
+}
+
+h1 {
+	font-size: $font-size-h1;
+}
+
+h2 {
+	font-size: $font-size-h2;
+}
+
+h4 {
+	font-size: $font-size-h4;
+}
+
+h5 {
+	font-size: $font-size-h5;
+}
+
+h6 {
+	font-size: $font-size-h6;
+}
+
+/*-------------END OF HEADINGS ---------------*/
+
+.outside-header {
+	text-align: center;
+	padding: 0 $side-padding;
+}
+
+li {
+	margin-bottom: .5em;
+}
+
+blockquote {
+	margin-left: $side-padding;
+	font-style: italic;
+	color: $gray;
+}
+
+.blockquote-footer {
+	font-size: .85em;
+	margin-top: $baseline/2;
+	color: darken($gray, 50%);
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	color: $link-color;
+	&.link:hover {
+		text-decoration: underline;
+	}
+}
+
+.a-left-line {
+	height: 1px;
+	background-color: white;
+	margin: .3em 0;
+	width: 50%;
+	margin-left: -.3em;
+	position: relative;
+	overflow: hidden;
+
+	.runner {
+	  width: 30px;
+	  background: black;
+	  position: absolute;
+	  height: 5px;
+	  left: 0;
+	  bottom: 0;
+	  margin-left: -30px;
+	  -webkit-transition: all 2s ease-in;
+	          transition: all 2s ease-in;
+	}
+
+}
+
+.a-right-line {
+	border-bottom: 1px solid white;
+	margin: .3em 0;
+	margin-left: 50%;
+	margin-right: -.3em;
+}
+
+.pagination {
+	text-align: center;
+	.current_page {
+		background: $blue;
+		color: white;
+	}
+	.page {
+		color: black;
+		padding: 6px;
+		border-radius: 50%;
+		margin-right: 2em;
+		display: inline-block;
+		width: 2em;
+		height: 2em;
+		&:hover {
+			@extend .current_page;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
+}
+
+.low-res-image {
+	max-height: 400px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	background-color: $hr-color;
+	margin: 2*$baseline 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.text-blue {
+	color: $blue !important;
+}
+.text-light-blue {
+	color: $light-blue !important;
+}
+.text-dark-blue {
+	color: $dark-blue !important;
+}
+.text-yellow {
+	color: yellow !important;
+}
+.text-green {
+	color: $green !important;
+}
+.text-light-green {
+	color: $light-green !important;
+}
+.text-dark-green {
+	color: $dark-green !important;
+}
+.text-orange {
+	color: $orange !important;
+}
+.text-light-orange {
+	color: $light-orange !important;
+}
+.text-dark-orange {
+	color: $dark-orange !important;
+}
+.text-red {
+	color: $red !important;
+}
+.text-light-red {
+	color: $light-red !important;
+}
+.text-dark-red {
+	color: $dark-red !important;
+}
+.text-gray {
+	color: $gray !important;
+}
+.text-light-gray {
+	color: $light-gray !important;
+}
+.text-dark-gray {
+	color: $dark-gray !important;
+}
+.text-white {
+	color: #fff !important;
+}
+.text-black {
+	color: #000 !important;
+}
+
+.bg-blue {
+	background: $blue !important;
+}
+.bg-light-blue {
+	background: $light-blue !important;
+}
+.bg-dark-blue {
+	background: $dark-blue !important;
+}
+.bg-yellow {
+	background: yellow !important;
+}
+.bg-green {
+	background: $green !important;
+}
+.bg-light-green {
+	background: $light-green !important;
+}
+.bg-dark-green {
+	background: $dark-green !important;
+}
+.bg-orange {
+	background: $orange !important;
+}
+.bg-light-orange {
+	background: $light-orange !important;
+}
+.bg-dark-orange {
+	background: $dark-orange !important;
+}
+.bg-red {
+	background: $red !important;
+}
+.bg-light-red {
+	background: $light-red !important;
+}
+.bg-dark-red {
+	background: $dark-red !important;
+}
+.bg-gray {
+	background: $gray !important;
+}
+.bg-light-gray {
+	background: $light-gray !important;
+}
+.bg-dark-gray {
+	background: $dark-gray !important;
+}
+.bg-white {
+	background: #fff !important;
+}
+.bg-black {
+	background: #000 !important;
+}
+
+// ---- Various helper classes
+.shadowed-text-black {
+	text-shadow: 1px 1px 1px #000;
+}
+.shadowed-text-white {
+	text-shadow: 1px 1px 1px #fff;
+}
+
+.bordered {
+	@include bordered;
+}
+
+.rounded {
+	@include bordered(1px, $gray, 6px);
+}
+
+.circled {
+	@include bordered(1px, $gray, 100%);
+}

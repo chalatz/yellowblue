@@ -1,0 +1,214 @@
+/**
+ * ======================================
+ * --------------- GRID -----------------
+ * ======================================
+ */
+
+/**
+ * I believe that grids with too many columns are unnecessary
+ * In most cases we need to use at most 4 columns
+ * So this grid deals with sections that are of full, half, one third and a quarter of width.
+ */
+
+
+/**
+ * The grid modules are placed in containers with a class of .row
+ */
+.row {
+	@include clearfix;
+	margin-bottom: $baseline;
+
+	.module {
+		@include post;
+		padding: 0;
+		margin-bottom: $baseline;
+	}
+
+	.module-body {
+		p {
+			margin: $baseline/2;
+		}
+	}
+
+	.block-module-header {
+		background: yellow;
+		h3 {
+			margin: 0;
+			padding: .5em;
+		}
+	}
+}
+
+/**
+ * ======= Modules and Tables Color variataons =============
+ */
+
+/**
+ * The default module.
+ */
+.module {
+	h3,h2, th {
+		background: $light-gray;
+	}
+}
+
+/**
+ * Modules and tables with a .yellow-var (yellow variation) class have their headings with a light blue background
+ */
+.yellow-var {
+	h3, h2, th {
+		background: yellow;
+	}
+}
+
+/**
+ * Modules and tables with a .light-blue-var (light blue variation) class have their headings with a light blue background
+ */
+.light-blue-var {
+	h3,h2, th {
+		background: $light-blue;
+	}
+}
+
+/**
+ * Modules and tables with a .blue-var (blue variation) class have their headings with a blue background
+ */
+.blue-var {
+	h3,h2, th {
+		background: $blue;
+		color: yellow;
+	}
+}
+
+/**
+ * ======= Grid widths =============
+ */
+.full-width {
+	width: 100%;
+}
+
+.full-width, .half-width, .one-third-width, .two-thirds-width, .a-quarter-width {
+	width: 100%;
+	margin-bottom: $baseline;
+	padding: .5em;
+	@include breakpoint(medium) {
+		float: left;
+		margin-right: 2%;
+		margin-bottom: 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+/**
+ * Gutters have a width of 2%.
+ */
+@mixin calc-width($columns, $gutter) {
+	width: (100/$columns - ($gutter - $gutter/$columns)) * 1%;
+}
+
+.half-width {
+	@include breakpoint(medium) {
+		@include calc-width(2,2);
+	}
+}
+
+.one-third-width {
+	@include breakpoint(medium) {
+		@include calc-width(3,2);
+	}
+}
+
+.two-thirds-width {
+	@include breakpoint(medium) {
+		@include calc-width(1.5,2);
+	}
+}
+
+.a-quarter-width {
+	@include breakpoint(medium) {
+		@include calc-width(2,2);
+		margin-bottom: $baseline;
+		&:nth-of-type(2) {
+			margin-right: 0;
+		}
+	}
+	@include breakpoint(large) {
+		@include calc-width(4,2);
+		margin-bottom: 0;
+		&:nth-of-type(2) {
+			margin-right: 2%;
+		}
+
+	}
+}
+
+/**
+ * This is just for demo purposes for the pattern library page
+ */
+.patterns-grid {
+	.full-width, .half-width, .one-third-width, .two-thirds-width, .a-quarter-width {
+		background-color: $bg-color;
+		border-radius: 3px;
+	}
+}
+/*----------------END GRID -------------------*/
+
+// ---- This makes tables responsive
+.table-container {
+    overflow: auto;
+}
+
+/**
+ * The main-content is the main container for content, e.g pages, blog posts and blog posts teasers.
+ */
+.main-content {
+
+	padding: $baseline $side-padding;
+
+} // .main-content
+
+/**
+ * The site footer
+ */
+.site-footer {
+
+	@include clearfix;
+	padding: $side-padding;
+
+} // .site-footer
+
+/**
+ * ======= Various helper classes =============
+ */
+
+.hide-me {
+	opacity: 0;
+}
+
+.centered {
+	text-align: center;
+}
+
+.floated {
+	float: left;
+	margin-right: 1em;
+	overflow: hidden;
+	margin-bottom: 1em;
+}
+
+.return-to-top {
+	float: right;
+}
+
+.toggle-code {
+	&::after {
+		content: " +";
+	}
+	&.code-shown {
+		&::after {
+			content: " -";
+		}
+	}
+}

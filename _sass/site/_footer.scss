@@ -1,0 +1,62 @@
+/**
+ * ======================================
+ * ---------- SITE FOOTER ---------------
+ * ======================================
+ */
+
+.go-to-top {
+	display: block;
+	text-align: right;
+	.svg-container-large,
+	.icon {
+		margin: 0;
+		padding: 0;
+	}
+	.icon {
+		margin-left: -1em;
+		-webkit-transition: all .3s linear;
+		        transition: all .3s linear;
+	}
+	&:hover {
+		.icon {
+			fill: $go-top-fill-hover;
+		}
+	}
+
+	@include breakpoint(medium) {
+		display: none;
+	}
+}
+
+.site-footer {
+	clear: both;
+	padding: .5em;
+	background: $site-footer-bg;
+	color: $site-footer-font-color;
+
+	a {
+		color: $site-footer-link-color;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.social-info {
+		text-align: center;
+		.icon {
+			-webkit-transition: all .3s linear;
+			        transition: all .3s linear;
+		}
+		a:hover {
+			text-decoration: none;
+			.icon {
+				fill: $social-icons-hover;
+			}
+		}
+	}
+
+	[class^="svg-container"] {
+		margin-right: 1.5em;
+	}
+
+}

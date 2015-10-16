@@ -1,0 +1,152 @@
+// ------- Red -------------------
+
+$main-color: #fbf5f3;
+
+// --- Body
+$font-color: #000022;
+$bg-color: #000022;
+$link-color: #c42847;
+
+// ---- Header
+$site-header-bg: #c42847;
+$site-header-font-color: #fbf5f3;
+$site-logo-font-shadow: #000;
+
+// ---- Navigation
+$nav-bg-color: $main-color;
+$nav-font-color: #c42847;
+$nav-item-underline-color: $nav-font-color;
+$nav-item-underline-hover-color: $bg-color;
+
+// ---- Posts
+$post-title-hover-color: #c42847;
+$read-more-bg: $nav-font-color;
+$read-more-cross-bg: #e28413;
+$read-more-font-color: $main-color;
+$read-more-hover-bg: darken($nav-font-color, 15%);
+$read-more-hover-color: $main-color;
+$hero-image-shadow: #de3c4b;
+$category-link-color: $dark-blue;
+$category-link-color-visited: $dark-blue;
+$category-link-color-hover: $dark-orange;
+$tag-link-color: $dark-orange;
+$tag-link-color-visited: $dark-orange;
+$tag-link-color-hover: $dark-blue;
+$categories-icon-fill: $blue;
+$tags-icon-fill: $dark-orange;
+.post-categories {
+	.icon {
+		fill: $blue;
+	}
+}
+.post-tags {
+	.icon {
+		fill: $tags-icon-fill;
+	}
+}
+.post, .module {
+	box-shadow: 0 15px 2px -10px $nav-font-color !important;
+}
+
+// ---- Pagination
+$current-page-bg: $main-color;
+$current-page-color: darken($bg-color, 20%);
+$pagination-link-color: $main-color;
+$pagination-link-bg: darken($bg-color, 20%);
+$pagination-link-hover-bg: $main-color;
+$pagination-link-hover-color: darken($bg-color, 20%);
+
+// ---- Posts Nav
+$posts-nav-color: $main-color;
+$posts-nav-bg: #de3c4b;
+$posts-nav-hover: #c42847;
+
+// ---- Go To Top icon
+$go-to-top-fill: $nav-font-color;
+$go-top-fill-hover: #fff;
+.go-to-top {
+	.icon {
+		fill: $go-to-top-fill;
+	}
+}
+
+// ---- Footer
+$site-footer-bg: #de3c4b;
+$site-footer-font-color: #fff;
+$site-footer-link-color: #000022;
+$social-icons-hover: #000022;
+.social-info {
+	.icon {
+		fill: $main-color;
+	}
+}
+.rss-icon {
+	fill: $site-footer-link-color;
+}
+
+// ---- Tags Labels list
+$tag-label-bg: $nav-font-color;
+$tag-label-font-color: $main-color;
+
+// ---- Outer Header
+$outer-header-color: #e28413;
+$outer-header-shadow-color: $main-color;
+$outer-header-icon-fill: #e28413;
+
+// ---- Outer Header span for category name
+.outside-cats {
+	color: $main-color;
+	text-shadow: 1px 1px 1px #e28413;
+}
+
+// ---- Outer Header span for tag name
+.outside-tags {
+	color: #de3c4b;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+// ---- Patten Library Page, Grid demo colors
+.patterns-grid .row div {
+	background-color: #e28413;
+}
+
+// ---- Front Page Modules
+// ---- If you plan to use color variation classes, you can omit using the styles below
+.site-sidebar {
+	.module:nth-child(1) {
+		h2 {
+			background-color: #e28413;
+			color: #000022;
+			.icon {
+				fill: #000022;
+			}
+		}
+	}
+	.module:nth-child(2) {
+		h2 {
+			background-color: #de3c4b;
+			color: #000022;
+		}
+	}
+}
+
+.main-content {
+	.half-width.module:nth-child(1) {
+		h3 {
+			background-color: darken(#c42847, 15%);
+			color: $main-color;
+		}
+	}
+	.half-width.module:nth-child(2) {
+		h3 {
+			background-color: #c42847;
+			color: $main-color;
+		}
+	}
+	.full-width.module:nth-child(1) {
+		h3 {
+			background-color: #e28413;
+			color: $main-color;
+		}
+	}
+}

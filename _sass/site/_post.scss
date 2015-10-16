@@ -1,0 +1,107 @@
+/**
+ * ======================================
+ * ------------- POSTS ------------------
+ * ======================================
+ */
+
+.post {
+
+	@include clearfix;
+	@include post;
+
+} // .post
+
+.post-body, .post-content {
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.post-date {
+	color: #666;
+	margin: .5em 1em;
+	font-style:italic;
+	font-size: .8em;
+}
+
+.post-icon-image {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: .5em;
+	background-size: contain;
+}
+
+.post-attachments {
+	border-top: 1px solid #eee;
+	padding: .5em 0;
+	.attachment-title {
+		font-weight: bold;
+	}
+	.attachment {
+		clear: both;
+		margin: .5em 0 0 1em;
+		&:hover {
+			color: black;
+		}
+	}
+}
+
+.read-more {
+	font-weight: bold;
+	margin: 1em 0;
+	overflow: hidden;
+	display: inline-block;
+	text-decoration: none;
+	color: $read-more-font-color;
+	.read-more-text {
+	background: $read-more-bg;
+	padding: 1em 2em 1em 1em;
+	line-height: 2.5em;
+	-webkit-transition: all .2s ease-in;
+	        transition: all .2s ease-in;
+	}
+	.cross {
+		background: $read-more-cross-bg;
+	padding: .5em;
+	font-size: 1.5em;
+	margin-left: -1em;
+	-webkit-transition: all .2s ease-in;
+	        transition: all .2s ease-in;
+	}
+	&:hover {
+		.read-more-text {
+			background: $read-more-hover-bg;
+			color: $read-more-hover-color;
+		}
+		.cross {
+			background: darken($read-more-cross-bg, 15%);
+		}
+	}
+}
+
+// ---- Next / Previous Post navigation links
+.posts-nav {
+	.go-to {
+		color: $posts-nav-color;
+		font-weight: bold;
+		background: $posts-nav-bg;
+		margin-top: 1.5em;
+		font-size: 2em;
+		width: 2em;
+		height: 2em;
+		line-height: 1.8em;
+		text-align: center;
+		border-radius: 50%;
+		&:hover {
+			background: $posts-nav-hover;
+			text-decoration: none;
+		}
+	}
+	.left-post {
+		float: left;
+	}
+	.right-post {
+		float: right;
+	}
+}

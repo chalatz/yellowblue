@@ -1,0 +1,31 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "base/normalize",
+    "base/prism",
+    "base/vars",
+    "color_schemes/yellowblue", // place you color schemes file here (available presets: yellowblue, green, red, gray, white)
+    "base/layout",
+    "base/typography",
+    "base/icomoon",
+    "base/icons",
+    "base/buttons",
+    "base/forms",
+    "base/notifications",
+    "base/tables",
+    "base/fluidbox",
+    "base/animations",
+    "site/404",
+    "site/nav",
+    "site/header",
+    "site/content",
+    "site/post",
+    "site/pagination",
+    "site/sidebar",
+    "site/footer",
+    "custom"
+;

@@ -1,0 +1,58 @@
+/**
+ * ======================================
+ * ---------- SITE HEADER ---------------
+ * ======================================
+ */
+
+.site-header {
+
+	background: $site-header-bg;
+	color: $site-header-font-color;
+
+	overflow: hidden;
+
+} // .site-header
+
+// ---------- Logo
+.site-logo {
+
+	margin-top: 1.5em;
+	text-align: center;
+	text-shadow: 1px 1px 3px #888;
+
+	a {
+		color: $site-header-font-color;
+	}
+
+}
+
+.site-logo-image {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: .5em;
+}
+
+.site-title-link {
+	.site-title {
+		font-size: 3.5em;
+		-webkit-transition: .2s all ease-out;
+		        transition: .2s all ease-out;
+		&:hover {
+			text-shadow: 2px 2px 3px $site-logo-font-shadow;
+		}
+	}
+	&:hover {
+		.runner {
+			margin-left: 100%;
+		}
+	}
+}
+
+.site-slogan {
+	font-style: italic;
+	font-size: 1.5em;
+	text-align: right;
+	margin-top: 1em;
+	margin-right: 1em;
+}

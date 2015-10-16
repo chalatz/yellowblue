@@ -1,0 +1,61 @@
+/**
+ * ======================================
+ * ------- SITE NAVIGATION --------------
+ * ======================================
+ */
+
+.site-nav {
+
+	ul {
+		margin-left: 0;
+	}
+
+	margin-top: 1em;
+	overflow: hidden;
+	background-color: $nav-bg-color;
+
+	li {
+		display: inline-block;
+		margin-right: 2em;
+		margin-bottom: 1em;
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		padding-bottom: .2em;
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		color: $nav-font-color;
+
+		&:hover {
+			color: darken($bg-color, 40%);
+			.border2 {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.border1, .border2 {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		height: 4px;
+	}
+
+	.border1 {
+		background: $nav-item-underline-color;
+		left: 0;
+	}
+
+	.border2 {
+		background: $nav-item-underline-hover-color;
+		right: 0;
+		margin-right: 100%;
+		-webkit-transition: all 1s ease-in;
+		        transition: all 1s ease-in;
+	}
+
+}

@@ -1,0 +1,36 @@
+/**
+ * ======================================
+ * -------- POSTS NAVIGATION ------------
+ * ======================================
+ */
+
+.pagination {
+
+	.pagination-link {
+		font-size: 1.2em;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
+		background: $pagination-link-bg;
+		color: $pagination-link-color;
+		display: inline-block;
+		border-radius: 50%;
+		&:hover {
+			background: $pagination-link-hover-bg;
+			color: $pagination-link-hover-color;
+		}
+	}
+
+	.current-page {
+		font-size: 1.2em;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
+		display: inline-block;
+		border-radius: 50%;
+		background: $current-page-bg;
+		color: $current-page-color;
+		font-weight: bold;
+	}
+
+}

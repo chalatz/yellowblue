@@ -1,0 +1,31 @@
+---
+layout: page_with_outer_heading
+title: Archives
+icon: icon-cabinet
+---
+
+<div class="archives">
+
+  {% for post in site.posts %}
+
+    {% unless post.next %}
+      <h2 data-sr="enter left" class="archives-year">{{ post.date | date: '%Y' }}</h2>
+    {% else %}
+      {% assign post_year = post.date | date: '%Y' %}
+      {% assign next_post_year = post.next.date | date: '%Y' %}
+      {% if post_year != next_post_year %}
+        <hr>
+        <h2 data-sr="enter left" class="archives-year">{{ post.date | date: '%Y' }}</h2>
+      {% endif %}
+    {% endunless %}
+    
+    {% assign post_month = post.date | date: '%B' %}
+    {% assign post_day = post.date | date: '%d' %}
+    <div class="archives-info">
+      <h4 class="archives-month">{{post_month}} {{post_day}} - </h4>
+      <a class="archives-post-title" href="{{ post.url }}">{{ post.title }}</a>
+    </div>
+
+  {% endfor %}
+
+</div>

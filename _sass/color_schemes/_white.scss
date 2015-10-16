@@ -1,0 +1,133 @@
+// ------- White -------------------
+
+$main-color: #111111;
+
+// --- Body
+$font-color: $main-color;
+$bg-color: #ffffff;
+$link-color: #0074D9;
+
+// ---- Header
+$site-header-bg: $bg-color;
+$site-header-font-color: $main-color;
+$site-logo-font-shadow: #aaaaaa;
+.site-header {
+	.a-left-line {
+		background-color: $main-color;
+	}
+	.a-right-line {
+		border-color: $main-color;
+	}
+	.runner {
+		background-color: #aaaaaa;
+	}
+}
+
+// ---- Navigation
+$nav-bg-color: $bg-color;
+$nav-font-color: $main-color;
+$nav-item-underline-color: $main-color;
+$nav-item-underline-hover-color: #aaaaaa;
+
+// ---- Posts
+$post-title-hover-color: #aaaaaa;
+$read-more-bg: $main-color;
+$read-more-cross-bg: $main-color;
+$read-more-font-color: $bg-color;
+$read-more-hover-bg: #aaaaaa;
+$read-more-hover-color: $main-color;
+$hero-image-shadow: darken($bg-color, 45%);
+$category-link-color: $dark-blue;
+$category-link-color-visited: $dark-blue;
+$category-link-color-hover: $dark-orange;
+$tag-link-color: $dark-orange;
+$tag-link-color-visited: $dark-orange;
+$tag-link-color-hover: $dark-blue;
+$categories-icon-fill: $blue;
+$tags-icon-fill: $dark-orange;
+.post .read-more:hover .cross {
+	background-color: #aaaaaa;
+	color: $main-color;
+}
+.post-categories {
+	.icon {
+		fill: $blue;
+	}
+}
+.post-tags {
+	.icon {
+		fill: $tags-icon-fill;
+	}
+}
+
+// ---- Pagination
+$current-page-bg: $main-color;
+$current-page-color: $bg-color;
+$pagination-link-color: $main-color;
+$pagination-link-bg: #aaaaaa;
+$pagination-link-hover-bg: $main-color;
+$pagination-link-hover-color: $bg-color;
+
+// ---- Posts Nav
+$posts-nav-color: $bg-color;
+$posts-nav-bg: $main-color;
+$posts-nav-hover: #aaaaaa;
+
+// ---- Go To Top icon
+$go-to-top-fill: $main-color;
+$go-top-fill-hover: #aaaaaa;
+.go-to-top {
+	.icon {
+		fill: $go-to-top-fill;
+	}
+}
+
+// ---- Forms
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	border-color: #aaaaaa !important;
+}
+
+// ---- Footer
+$site-footer-bg: #aaaaaa;
+$site-footer-font-color: $main-color;
+$site-footer-link-color: $bg-color;
+$social-icons-hover: $main-color;
+.social-info {
+	.icon {
+		fill: #fff;
+	}
+}
+.rss-icon {
+	fill: $site-footer-link-color;
+}
+
+// ---- Tags Labels list
+$tag-label-bg: $main-color;
+$tag-label-font-color: $bg-color;
+
+// ---- Outer Header
+$outer-header-color: $font-color;
+$outer-header-shadow-color: #aaaaaa;
+$outer-header-icon-fill: $font-color;
+
+// ---- Outer Header span for category name
+.outside-cats {
+	color: #aaaaaa;
+	text-shadow: 1px 1px 1px #000;
+}
+
+// ---- Outer Header span for tag name
+.outside-tags {
+	color: #aaaaaa;
+	text-shadow: 1px 1px 1px #000;
+}
+
+// ---- Pattern Library demo page
+// ---- The styles below apply striclty to to the Pattern Library demo page. They do not affect the color scheme overall.
+.patterns-grid .row div {
+	background-color: #aaaaaa;
+}
+// ---- End of styles for the Pattern Library Page

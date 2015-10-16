@@ -1,0 +1,53 @@
+/**
+ * ======================================
+ * --------------- FORMS-----------------
+ * ======================================
+ */
+
+.form-label {
+	display: block;
+	margin: $baseline/2 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	padding: $side-padding;
+	outline: none;
+	border: 1px solid $bg-color;
+	border-radius: 3px;
+	max-width: 100%;
+
+	&:focus {
+		border-color: $blue;
+		box-shadow: 0 0 5px darken($blue, 10%);
+	}
+}
+
+select {
+	max-width: 100%;
+	padding: 0 $baseline 0 $baseline/3;
+	margin: $baseline/2 0 $baseline 0;
+}
+
+.help-msg {
+	@extend blockquote;
+	font-style: normal;
+	margin-top: -.75em;
+}
+
+.error-label {
+	color: $error-color;
+	font-weight: bold;
+}
+
+.error-field {
+	border-color: $error-color !important;
+	color: $error-color;
+}
+
+.error-msg {
+	@extend .help-msg;
+	color: $error-color;
+}

@@ -1,0 +1,92 @@
+/**
+ * ======================================
+ * ------------ VARIABLES ---------------
+ * ======================================
+ */
+
+ /**
+  * ======= Sass variables and mixins =============
+  */
+
+/**
+ * The theme was built with the mobile-first technique, using em based widths
+ */
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @if $point == medium_up {
+    @media (max-width: 50em) { @content; }
+  }
+  @if $point == small_up {
+    @media (max-width: 350px) { @content; }
+  }
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin bordered($width: 1px, $color: $gray, $radius: 0) {
+  border: $width solid $color;
+  border-radius: $radius;
+}
+
+/**
+ * Posts and modules have similarities.
+ * That's why you will find this mixin inside modules.
+ */
+@mixin post {
+	background-color: #fff;
+	padding: .5em;
+	margin-bottom: 1em;
+	border: 1px solid #e4e4e4;
+	box-shadow: 0 15px 2px -10px #444;
+}
+
+@mixin sized_box($width, $height){
+  width: $width;
+  height: $height;
+}
+
+// ---- Color Variables
+$bg-color: #7ed6ff;
+$bg-color-dark: #494949;
+$blue: #006798;
+$dark-blue: darken($blue, 15%);
+$light-blue: #7ed6ff;
+$midnight: #2c3e50;
+$green: #52B072;
+$light-green: lighten($green, 30%);
+$dark-green: darken($green, 30%);
+$orange: #FCB03C;
+$light-orange: lighten($orange, 15%);
+$dark-orange: darken($orange, 30%);
+$red: #FC4E2D;
+$light-red: lighten($red, 15%);
+$dark-red: darken($red, 30%);
+$gray: #7f8c8d;
+$light-gray: lighten($gray, 25%);
+$dark-gray: darken($gray, 25%);
+
+$error-color: $red;
+
+$font-color: #000000;
+
+// ---- Some useful sizes
+$baseline: 1em;
+$side-padding: .5em;
+
+$btn-roundness: 6px;
+$btn-baseline: $baseline/1.2;
+$btn-side-padding: $side-padding*2.5;

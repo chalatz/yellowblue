@@ -1,0 +1,29 @@
+---
+layout: page
+title: Contact Me
+site-url: "http://localhost:4000"
+---
+
+{% assign response = '/thank-you' | prepend: page.site-url %}
+
+<form action="http://formspree.io/your@email.com" method="POST">
+
+  <div class="row">
+    <label class="form-label" for="input-text">Your Name:</label>
+    <input type="text" name="name" placeholder="T" required>
+  </div>
+
+  <div class="row">
+    <label class="form-label" for="input-text">Your E-mail:</label>
+    <input type="email" name="_replyto" placeholder="@" required>
+  </div>
+
+  <div class="row">
+    <label class="form-label" for="textarea">Your message:</label>
+    <textarea cols="40" rows="8" name="message" placeholder="Type your message here"></textarea>
+  </div>
+
+  <input type="submit" class="btn btn-green" value="Send">
+  <input type="hidden" name="_next" value="{{ response }}" />
+
+</form> 

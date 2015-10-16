@@ -1,0 +1,186 @@
+/**
+ * ======================================
+ * ---------- The 404 page --------------
+ * ======================================
+ */
+
+// the long face
+.face {
+  margin: 0 auto;
+  width: 10em;
+  height: 5em;
+  position: relative;
+  @include breakpoint(medium) {
+    width: 15em;
+    height: 7.5em;
+  }
+  @include breakpoint(large) {
+    width: 30em;
+    height: 11em;
+  }
+}
+
+.socket {
+  overflow: hidden;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  border-radius: 50%;
+  @include breakpoint(medium) {
+    width: 3em;
+    height: 3em;
+  }
+  @include breakpoint(large) {
+    width: 5em;
+    height: 5em;
+  }
+}
+.left-socket {
+  left: 0;
+}
+
+.right-socket {
+  right: 0;
+}
+.eye,
+.mouth {
+  background: $blue;
+}
+
+.eye {
+  width: 2em;
+  height: 2em;
+  margin-top: 0;
+  @include breakpoint(medium) {
+    width: 3em;
+    height: 3em;
+  }
+  @include breakpoint(large) {
+    width: 5em;
+    height: 5em;
+  }
+}
+
+.mouth {
+  height: .5em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
+  @include breakpoint(medium) {
+    height: .75em;
+  }
+  @include breakpoint(large) {
+    height: 1em;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 100%;
+  }
+  20% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 0%;
+  }
+  75% {
+    margin-top: 0%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 100%;
+  }
+  20% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 0%;
+  }
+  75% {
+    margin-top: 0%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+.eye {
+	-webkit-animation-name: animate, blush;
+	        animation-name: animate, blush;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+// the letters (or numbers)
+.word {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.letter {
+  font-family: Helvetica;
+  font-size: 4em;
+  color: $dark-red;
+}
+
+// the length of the word in letters
+$length: 3;
+
+// adjust the animation duration in relation to 1s
+$adjust: 1.5;
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+$i: 1;
+@while $i <= $length + 1 {
+  .letter:nth-child(#{$i}) {
+    animation: appear #{$i * $adjust}s;
+  }
+  $i: $i + 1;
+}

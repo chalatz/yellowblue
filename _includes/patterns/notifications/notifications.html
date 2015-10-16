@@ -1,0 +1,52 @@
+<section id="notifications">
+
+	<h2>Notifications</h2>
+
+	<div class="row">
+
+		<div class="half-width">
+			<div class="alert-info">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<h3>Information</h3>
+				<p>I would like to inform you that information text goes here.</p>
+			</div>
+			{% include patterns/notifications/alert_info_code.html %}
+		</div>
+
+		<div class="half-width">
+			<div class="alert-success">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<h3>Success</h3>
+				<p>You have successfully acknowledged that success text goes here.</p>
+			</div>
+			{% include patterns/notifications/alert_success_code.html %}
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="half-width">
+			<div class="alert-warning">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<h3>Warning</h3>
+				<p>Warning: Warning text may not <span class="bold">not</span> go here.</p>
+			</div>
+			{% include patterns/notifications/alert_warning_code.html %}
+		</div>
+
+		<div class="half-width">
+			<div class="alert-error">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<h3>Error</h3>
+				<p>Error! Error text does definitely not <span class="bold">not</span> go here!</p>
+			</div>
+			{% include patterns/notifications/alert_error_code.html %}
+		</div>
+	</div>
+
+</section>

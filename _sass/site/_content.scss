@@ -1,0 +1,157 @@
+/**
+ * ======================================
+ * ------------- CONTENT ----------------
+ * ======================================
+ */
+
+.main-content {
+
+	padding: 1em .5em;
+	overflow-x: hidden;
+
+	.post-title-link {
+		color: black;
+		h1 {
+			margin: 0;
+		}
+		&:hover {
+			color: $post-title-hover-color;
+		}
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	@include breakpoint(medium) {
+		width: 66.66%;
+		float: left;
+	}
+
+} // .main-content
+
+.post-content {
+	font-size: 1.3em;
+}
+
+.post-body {
+	font-size: 1.2em;
+}
+
+.post-content-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 66em;
+}
+
+.hero-image {
+	text-align: center;
+	img {
+		box-shadow: 0 15px 2px -10px $hero-image-shadow;
+	}
+}
+
+.tag-label {
+	display: inline-block;
+	margin-bottom: $baseline;
+	margin-right: $side-padding;
+	background: $tag-label-bg;
+	color: $tag-label-font-color;
+	padding: $side-padding/2 $side-padding;
+}
+
+.post-categories {
+	.category-link {
+		color: $category-link-color;
+		-webkit-transition: all .2s linear;
+		        transition: all .2s linear;
+		display: inline-block;
+		&:visited {
+			color: $category-link-color-visited;
+		}
+		&:hover {
+			color: $category-link-color-hover;
+		}
+	}
+}
+.post-tags {
+	.tag-link {
+		color: $tag-link-color;
+		-webkit-transition: all .2s linear;
+		        transition: all .2s linear;
+		display: inline-block;
+		&:visited {
+			color: $tag-link-color-visited;
+		}
+		&:hover {
+			color: $tag-link-color-hover;
+		}
+	}
+}
+
+.outside-header {
+	font-style: italic;
+	color: $outer-header-color;
+	text-shadow: 1px 1px 1px $outer-header-shadow-color;
+	.icon {
+		fill: $outer-header-icon-fill;
+	}
+}
+
+.archives {
+
+	.archives-info {
+		margin-left: .5em;
+		@include breakpoint(medium) {
+			margin-left: 1em;
+		}
+		@include breakpoint(large) {
+			margin-left: 1.5em;
+		}
+	}
+	.archives-month {
+		display: inline-block;
+	}
+	.archives-post-title {
+		font-size: 1.3em;
+		color: $blue;
+		font-weight: bold;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
+
+.links-inline-list {
+	a {
+		margin-right: .5em;
+		.svg-container {
+			color: $blue;
+		}
+		&:hover {
+			text-decoration: none !important;
+			.svg-container {
+				color: $blue;
+				text-decoration: underline;
+			}
+		}
+	}
+	svg {
+		visibility: hidden;
+	}
+	a:hover {
+		svg {
+			visibility: visible;
+		}
+	}
+}
+
+.return-to-top {
+	color: $blue;
+}
+
+.padded-span {
+	padding-left: .3em;
+	padding-right: .3em;
+}

@@ -1,0 +1,66 @@
+/**
+ * ======================================
+ * ------------ BUTTONS -----------------
+ * ======================================
+ */
+
+button,
+.btn {
+	border: 0;
+	padding: $btn-baseline $btn-side-padding;
+	border-radius: $btn-roundness;
+	text-align: center;
+	display: inline-block;
+	background-color: $light-gray;
+
+	&:hover {
+		background: $bg-color-dark;
+		color: #fff;
+	}
+
+	&:active {
+		background: lighten($bg-color-dark, 20%);
+		padding-left: $btn-side-padding*1.2;
+		padding-right: $btn-side-padding*0.8;
+	}
+}
+
+.btn-primary {
+	background: $blue;
+	color: yellow;
+	&:hover {
+		color: yellow;
+	}
+}
+
+.btn-blue {
+	background: $blue;
+	color: #fff;
+}
+
+.btn-green {
+	background: $green;
+	color: #fff;
+}
+
+.btn-orange {
+	background: $orange;
+	color: #000;
+}
+
+.btn-red {
+	background: $red;
+	color: #fff;
+}
+
+.btn-small {
+	font-size: .85em;
+}
+
+.btn-large {
+	font-size: 1.85em;
+}
+
+a.btn:hover {
+	color: #fff;
+}

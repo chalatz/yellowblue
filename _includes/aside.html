@@ -1,0 +1,55 @@
+<aside class="site-sidebar">
+
+	<div class="module">
+		<header class="block-module-header">
+			<h2>
+				<div class="svg-container">
+					<svg class="icon icon-list2" viewBox="0 0 32 32">
+						<use xlink:href="#icon-list2"></use>
+					</svg>
+				</div>
+				Categories
+			</h2>
+		</header>
+		<div class="module-body">
+			<ul>
+				{% for cat in site.categories %}
+					{% assign cat_name = cat | first %}
+					{% assign cat_size = cat | last | size %}
+					{% assign cat_slug = cat_name | slugify  %}
+					<li>
+						<a class="bold" href="/category/{{cat_slug | prepend: site.baseurl}}">
+							{{cat_name}} ({{cat_size}})
+					</li>
+						</a>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div class="module">
+		<header class="block-module-header">
+			<h2>
+				<div class="svg-container">
+					<svg class="icon icon-tag" viewBox="0 0 32 32">
+						<use xlink:href="#icon-tag"></use>
+					</svg>
+				</div>
+				Tags
+			</h2>
+		</header>
+		<div class="module-body">
+			<p>
+				{% for tag in site.tags %}
+					{% assign tag_name = tag | first %}
+					{% assign tag_size = tag | last | size %}
+					{% assign tag_slug = tag_name | slugify  %}
+					<a class="tag-label bold" href="/tag/{{tag_slug | prepend: site.baseurl}}">
+						{{tag_name}} ({{tag_size}})
+					</a>
+				{% endfor %}
+			</p>
+		</div>
+	</div>
+
+</aside>

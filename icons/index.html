@@ -1,0 +1,20 @@
+---
+layout: page
+title: Icons
+---
+{% include icomoon.html %}
+
+{% for icon in site.data.icons %}
+
+<div class="floated icon-container centered">
+  <div class="svg-container-large">
+    <svg class="icon {{ icon.icon_name }}" viewBox="0 0 32 32">
+      <use xlink:href="#{{ icon.icon_name }}"></use>
+    </svg>
+  </div>
+  <div>
+    {{ icon.icon_name }}
+  </div>
+</div>
+
+{% endfor %}

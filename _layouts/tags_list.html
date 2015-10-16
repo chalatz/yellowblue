@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body>
+
+      {% include icomoon.html %}
+
+      {% include header.html %}
+
+      <h1 class="outside-header">Posts tagged as: <span class="outside-tags">{{page.tag_name}}</span></h1>
+
+      <div role="main" class="main-content">
+        {{ content }}
+      </div>
+
+      {% include aside.html %}
+
+      {% include footer.html %}
+
+    </body>
+
+</html>

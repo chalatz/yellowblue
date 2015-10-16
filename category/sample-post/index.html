@@ -1,0 +1,10 @@
+---
+layout: categories_list
+cat_name: 'Sample Post'
+---
+
+{% for post in site.categories.['sample post'] %}
+
+  {% include teaser.html %}
+
+{% endfor %}
