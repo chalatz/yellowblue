@@ -29,7 +29,7 @@ Yellowblue is a clean, modern, customizable, responsive blog theme, built for Je
 - 4 additional color scheme presets. Apply them by changing a single word in the code.
 - By the power of Sass variables, you can apply your own color schemes.
 
-[Read the documentation online](http://chalatz.github.io/yellowblue-docs/)
+#### [Read the documentation online](http://chalatz.github.io/yellowblue-docs/)
 
 ###Credits
 
