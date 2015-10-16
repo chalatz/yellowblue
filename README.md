@@ -30,6 +30,7 @@ Yellowblue is a clean, modern, customizable, responsive blog theme, built for Je
 - Distraction-free reading. The sidebar goes to the bottom while on posts and pages.
 - 4 additional color scheme presets. Apply them by changing a single word in the code.
 - By the power of Sass variables, you can apply your own color schemes.
+- Github Pages ready. No extra plugins are installed
 
 #### [Read the documentation online](http://chalatz.github.io/yellowblue-docs/)
 

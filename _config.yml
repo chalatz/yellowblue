@@ -14,7 +14,7 @@ github_username:  jekyll
 markdown: kramdown
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 
-highlighter: rouge
+highlighter: pygments
 
 # YB Settings
 excerpt_separator: <!-- more -->
