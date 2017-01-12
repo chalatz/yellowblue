@@ -12,9 +12,15 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 
-highlighter: pygments
+highlighter: rouge
+
+gems:
+   - jekyll-paginate
 
 # YB Settings
 excerpt_separator: <!-- more -->
