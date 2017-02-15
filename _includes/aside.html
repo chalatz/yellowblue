@@ -18,7 +18,7 @@
 					{% assign cat_size = cat | last | size %}
 					{% assign cat_slug = cat_name | slugify  %}
 					<li>
-						<a class="bold" href="/category/{{cat_slug | prepend: site.baseurl}}">
+						<a class="bold" href="/category/{{cat_slug | prepend: site.github.url}}">
 							{{cat_name}} ({{cat_size}})
 					</li>
 						</a>
@@ -44,7 +44,7 @@
 					{% assign tag_name = tag | first %}
 					{% assign tag_size = tag | last | size %}
 					{% assign tag_slug = tag_name | slugify  %}
-					<a class="tag-label bold" href="/tag/{{tag_slug | prepend: site.baseurl}}">
+					<a class="tag-label bold" href="/tag/{{tag_slug | prepend: site.github.url}}">
 						{{tag_name}} ({{tag_size}})
 					</a>
 				{% endfor %}
