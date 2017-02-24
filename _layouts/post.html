@@ -31,7 +31,7 @@ layout: post_page
 		{% if page.hero %}
 			<div class="hero-image">
 				{% if page.hero_high %}
-					<a class="image-link" href="{{ site.baseurl }}/{{page.hero_high}}"><img src="{{ site.baseurl }}//{{ page.hero }}" alt="{{page.hero_alt}}"></a>
+					<a class="image-link" href="{{ site.baseurl }}/{{page.hero_high}}"><img src="{{ site.baseurl }}/{{ page.hero }}" alt="{{page.hero_alt}}"></a>
 				{% else %}
 					<img src="/{{page.hero | prepend: site.baseurl}}" alt="{{page.hero_alt}}">
 				{% endif %}
