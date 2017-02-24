@@ -18,7 +18,7 @@
 					{% assign cat_size = cat | last | size %}
 					{% assign cat_slug = cat_name | slugify  %}
 					<li>
-						<a class="bold" href="{{ site.github.url }}/category/{{cat_slug}}">
+						<a class="bold" href="{{ site.baseurl }}/category/{{cat_slug}}">
 							{{cat_name}} ({{cat_size}})
 					</li>
 						</a>
