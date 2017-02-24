@@ -20,9 +20,9 @@ layout: post_page
 				{% for cat_name in page.categories %}
 					{% assign cat_slug = cat_name | slugify  %}
 					{% if cat_name != last_cat %}
-						<a class="category-link" href="/category/{{cat_slug | prepend: site.baseurl}}">{{cat_name}}</a> ,
+						<a class="category-link" href="{{ site.baseurl }}/category/{{ cat_slug }}">{{cat_name}}</a> ,
 					{% else %}
-						<a class="category-link" href="/category/{{cat_slug | prepend: site.baseurl}}">{{cat_name}}</a>
+						<a class="category-link" href="{{ site.baseurl }}/category/{{ cat_slug }}">{{cat_name}}</a>
 					{% endif %}
 				{% endfor %}
 			</div>
@@ -31,7 +31,7 @@ layout: post_page
 		{% if page.hero %}
 			<div class="hero-image">
 				{% if page.hero_high %}
-					<a class="image-link" href="/{{page.hero_high}}"><img src="/{{page.hero | prepend: site.baseurl}}" alt="{{page.hero_alt}}"></a>
+					<a class="image-link" href="{{ site.baseurl }}/{{page.hero_high}}"><img src="{{ site.baseurl }}//{{ page.hero }}" alt="{{page.hero_alt}}"></a>
 				{% else %}
 					<img src="/{{page.hero | prepend: site.baseurl}}" alt="{{page.hero_alt}}">
 				{% endif %}
@@ -57,9 +57,9 @@ layout: post_page
 				{% for tag_name in page.tags %}
 					{% assign tag_slug = tag_name | slugify  %}
 					{% if tag_name != last_tag %}
-						<a class="tag-link" href="/tag/{{tag_slug | prepend: site.baseurl}}">{{tag_name}}</a> ,
+						<a class="tag-link" href="{{ site.baseurl }}/tag/{{ tag_slug }}">{{tag_name}}</a> ,
 					{% else %}
-						<a class="tag-link" href="/tag/{{tag_slug | prepend: site.baseurl}}">{{tag_name}}</a>
+						<a class="tag-link" href="{{ site.baseurl }}/tag/{{ tag_slug }}">{{tag_name}}</a>
 					{% endif %}
 				{% endfor %}
 			</div>
@@ -79,10 +79,10 @@ layout: post_page
 
 	<div class="posts-nav">
 		{% if page.previous %}
-			<a href="{{page.previous.url}}" title="{{page.previous.title}}" class="go-to right-post">&rarr;</i></a>
+			<a href="{{ site.baseurl }}{{page.previous.url }}" title="{{page.previous.title}}" class="go-to right-post">&rarr;</i></a>
 		{% endif %}
 		{% if page.next %}
-			<a href="{{page.next.url}}" title="{{page.next.title}}" class="go-to left-post">&larr;</a>
+			<a href="{{ site.baseurl }}{{page.next.url }}" title="{{page.next.title}}" class="go-to left-post">&larr;</a>
 		{% endif %}
 	</div>
 

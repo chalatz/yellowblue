@@ -44,7 +44,7 @@
 					{% assign tag_name = tag | first %}
 					{% assign tag_size = tag | last | size %}
 					{% assign tag_slug = tag_name | slugify  %}
-					<a class="tag-label bold" href="{{ site.github.url }}/tag/{{tag_slug }}">
+					<a class="tag-label bold" href="{{ site.baseurl }}/tag/{{tag_slug }}">
 						{{tag_name}} ({{tag_size}})
 					</a>
 				{% endfor %}
