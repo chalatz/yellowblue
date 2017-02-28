@@ -4,7 +4,7 @@
 
 Yellowblue is a clean, modern, customizable, responsive blog theme, built for Jekyll, the most popular static site generator.
 
-### [Demo](http://demo-yb.yellowblue.eu/)
+### [Demo](http://chalatz.github.io/yellowblue/)
 
 ###Features
 
