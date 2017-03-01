@@ -20,4 +20,4 @@ No need to install extra plugins. Yellowblue takes care of the programming stuff
 
 Oh, and Yellowblue comes with its own rich and stylish pattern library!
 
-Please make sure to check Yellowblue's [full set of features]({% post_url 2015-09-25-yellowblue-features %}).
+Please make sure to check Yellowblue's [full set of features]({{ site.baseurl }}{% post_url 2015-09-25-yellowblue-features %}).
