@@ -4,6 +4,7 @@ title:  "Features"
 date:   2015-09-25 18:19:27
 categories: jekyll
 tags: ['Site Features']
+permalink: yellowblue-features
 comments: true
 ---
 - Clean and modern design
