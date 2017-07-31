@@ -6,7 +6,7 @@ Yellowblue is a clean, modern, customizable, responsive blog theme, built for Je
 
 ### [Demo](http://chalatz.github.io/yellowblue/)
 
-###Features
+### Features
 
 - Clean and modern design
 - Fully responsive, built using the 'Mobile First' technique
@@ -34,7 +34,7 @@ Yellowblue is a clean, modern, customizable, responsive blog theme, built for Je
 
 #### [Read the documentation online](http://chalatz.github.io/yellowblue-docs/)
 
-###Credits
+### Credits
 
 Yellowblue uses some excellent open source tools, libraries and assets, as well as a couple of services. Thank you all!
 
